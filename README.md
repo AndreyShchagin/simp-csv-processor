@@ -2,14 +2,21 @@
 
 Process CSV stream on custom TCP port
 
-## Clone project
+## Get sources
 
-git clone ...
+```
+git clone git@github.com:AndreyShchagin/simp-csv-processor.git
+```
 
 ## Build
- Maven is required:
+ With Maven: jar will be placed in target/
  ```
  mvn clean package
+ ```
+ 
+ Without maven: jar will be in build/libs
+ ```
+ ./gradlew clean build
  ```
  
 ## Run
