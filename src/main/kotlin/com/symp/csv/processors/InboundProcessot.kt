@@ -1,13 +1,14 @@
 package com.symp.csv.processors
 
 import org.slf4j.Logger
-import org.slf4j.LoggerFactory
+import com.symp.csv.writers.SympWriter as SympWriter1
 
 /**
  * The generic interface for online processors
  */
-interface InboundProcessor<T:java.io.Closeable> {
+interface InboundProcessor<T:java.io.Closeable, V, K> {
     var client: T
+    open var reportWriter: SympWriter1<V,K>
     var interrupted: Boolean
     val log: Logger
     /**
