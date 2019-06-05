@@ -26,3 +26,7 @@ java -jar target/csvParser.jar -p 9000
 ```
 
 Usage will be printed on the attempt to start without parameters
+
+## Memory consumption
+ 
+![memory consumption](img/csvParserMem.png "Memory consumption on local environment")

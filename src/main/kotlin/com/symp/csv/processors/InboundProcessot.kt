@@ -8,7 +8,7 @@ import com.symp.csv.writers.SympWriter as SympWriter1
  */
 interface InboundProcessor<T:java.io.Closeable, V, K> {
     var client: T
-    open var reportWriter: SympWriter1<V,K>
+    var reportWriter: SympWriter1<V,K>
     var interrupted: Boolean
     val log: Logger
     /**
