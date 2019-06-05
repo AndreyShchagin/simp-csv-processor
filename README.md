@@ -30,7 +30,7 @@ Usage will be printed on the attempt to start without parameters
 ## How does it work
 
 Parser uses Map to map users with the statistics.  
-Map accumulates user information and once the size reaches the threshold which is equal to batch size - the report will be written to file.  
+Map accumulates user information and once the size reaches the threshold which is equal to batch size - the report will be written to file and the map will be cleared (that's how there are no memory leaks).  
 
 Fork-Join pool is used in order to calculate average
 
