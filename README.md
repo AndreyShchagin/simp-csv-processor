@@ -22,10 +22,17 @@ git clone git@github.com:AndreyShchagin/simp-csv-processor.git
 ## Run
 
 ```
-java -jar target/csvParser.jar -p 9000
+java -jar <path_to_jar>/csvParser.jar -p 9000
 ```
 
 Usage will be printed on the attempt to start without parameters
+
+## How does it work
+
+Parser uses Map to map users with the statistics.  
+Map accumulates user information and once the size reaches the threshold which is equal to batch size - the report will be written to file.  
+
+Fork-Join pool is used in order to calculate average
 
 ## Memory consumption
  
